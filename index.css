@@ -1,0 +1,170 @@
+@font-face {
+    font-family: 'Herculanum';
+    src: url('assets/Herculanum\ Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+* {
+    color: white;
+    font-size: 16px;
+    font-family: "Herculanum", monospace;
+}
+
+body {
+    --bittersweet-shimmer: hsla(2, 47%, 49%, 1);
+    --dark-purple: hsla(317, 43%, 11%, 1);
+    --dark-purple-2: hsla(337, 48%, 17%, 1);
+    --flame: hsla(17, 63%, 54%, 1);
+    --licorice: hsla(338, 80%, 4%, 1);
+    --licorice-transparent: hsla(338, 80%, 4%, 0.7);
+
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+li {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+input {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 300px;
+    height: 30px;
+    border-radius: 4px;
+    appearance: none;
+    border-style: none;
+    color: black;
+}
+
+input:focus {
+    outline: none;
+    border: 2px solid darkcyan;
+}
+
+input:required:invalid {
+    border: 2px solid var(--flame);
+}
+
+.left-column {
+    height: 100vh;
+    flex: 1;
+    background-image: url("assets/avatar.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.right-column {
+    height: 100vh;
+    flex: 2;
+    background-color: var(--dark-purple-2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.logo-container {
+    position: absolute;
+    top: 100px;
+    height: 120px;
+    width: 100%;
+    background-color: var(--licorice-transparent);
+    text-align: center;
+}
+
+.logo {
+    height: 100%;
+    object-fit:contain;
+    position: relative;
+    top: -7px;
+}
+
+.form {
+    height: 650px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.form-description, .form-submit {
+    height: 150px;
+    box-sizing: border-box;
+    padding: 0 20px;
+}
+
+.form-body {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    box-sizing: border-box;
+    padding: 0 30px;
+}
+
+.form-header {
+    font-size: 1.5rem;
+}
+
+.input-container {
+    height: 70%;
+    display: flex;
+    justify-content: flex-start;
+    gap: 100px;
+}
+
+.form-description * {
+    font-size: 1.5rem;
+}
+
+.form-body {
+    box-shadow: 0 0 16px 0 var(--dark-purple);
+}
+
+.form-submit {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+}
+
+.submit {
+    width: 280px;
+    height: 50px;
+    background-color: var(--flame);
+    border-style: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.submit:hover {
+    background-color: rgb(155, 78, 47);;
+}
+
+.login {
+    color: var(--flame);
+    background-color: transparent;
+    border-style: none;
+}
+

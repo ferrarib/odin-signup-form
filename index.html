@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="left-column">
+        <div class="logo-container">
+            <img src="assets/avatar-transparent.png" alt="Avatar The Last Airbender Logo" class="logo">
+        </div>
+    </div>
+    <div class="right-column">
+        <div class="right-container">
+            <form class="form" action="#">
+                <div class="form-description">
+                    <p>This is not a real online service! You know you need something like this in your life to help you
+                        realize your deepest dreams. Sign up <em>now</em> to get started</em></p>
+                    <span>You <em>know</em> you want to</span>
+                </div>
+                <div class="form-body">
+                    <span class="form-header">Let`s do this!</span>
+                    <div class="input-container">
+                        <div class="input-left">
+                            <ul>
+                                <li>
+                                    <label for="firstName">FIRST NAME</label>
+                                    <input type="text" id="firstName" name="firstName" required>
+                                </li>
+                                <li>
+                                    <label for="email">EMAIL</label>
+                                    <input type="email" name="email" id="email" required>
+                                </li>
+                                <li>
+                                    <label for="pwd">PASSWORD</label>
+                                    <input type="password" name="pwd" id="pwd" required>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="input-right">
+                            <ul>
+                                <li>
+                                    <label for="lastName">LAST NAME</label>
+                                    <input type="text" id="lastName" name="lastName" required>
+                                </li>
+                                <li>
+                                    <label for="tel">PHONE NUMBER</label>
+                                    <input type="tel" name="tel" id="tel" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                                </li>
+                                <li>
+                                    <label for="cpwd">CONFIRM PASSWORD</label>
+                                    <input type="password" name="cpwd" id="cpwd" required>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-submit">
+                    <button class="submit" type="submit" onclick="return DoPasswordsMatch()">Create Account</button>
+                    <span>Already have an account? <button class="login" type="button">Log in</button></span>
+                </div>
+
+                <script>
+
+                    function DoPasswordsMatch() {
+                        var password = document.getElementById("pwd");
+                        var confirmPassword = document.getElementById("cpwd");
+                        if (password.value == confirmPassword.value){
+                            return true;
+                        }
+                        else {
+                            password.setAttribute("isvalid", "false");
+                            return false;
+                        }
+                        
+                    }
+
+                </script>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
